@@ -9,7 +9,7 @@ function Header() {
         bg-medpurple 
         flex 
         '>
-            <div className="logo "><bold>GetItDone</bold></div>
+            <div className="logo ">GetItDone</div>
             <ul className='flex '>
                 <li className='hover:bg-darkgreen '>Home</li>
                 <li className='hover:bg-darkgreen' >About</li>

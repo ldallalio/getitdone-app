@@ -1,13 +1,23 @@
+import { TaskProvider } from './context/TaskContext'
 import Header from "./components/Header";
-import Task from "./components/Task";
+import NewForm from "./components/NewForm";
+import TaskItem from "./components/TaskItem";
+import TaskList from './components/TaskList';
+
 
 function App() {
-  return (
-    <div className="App">
-      <Header/>
-      <Task/>
-    </div>
-  );
+  
+    return (
+      <TaskProvider>
+        <div className="App">
+          <Header/>
+          <NewForm/>
+          <TaskList/>
+        </div>
+        </TaskProvider>
+      );
+  
+  
 }
 
 export default App;

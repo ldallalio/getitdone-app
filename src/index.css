@@ -31,14 +31,66 @@ header ul li{
 
 .card {
   margin: auto;
-  margin-top:50px;
+  margin-top:40px;
   background-color: aquamarine;
   display:flex;
-  max-width:1080px;
+  max-width:600px;
   min-height: 100px;
   width:70%;
   padding:1em;
-  justify-content: center;
+  flex-flow: column wrap;
   border-radius: 15px;
   box-shadow:rgba(0, 0, 0, 0.26) 1px 1px 16px 0px;
 }
+
+.form-title{
+  margin:10px;
+  color: rgb(49, 11, 85);
+}
+.new-form input {
+  padding: 10px;
+  margin: 10px;
+  height:40px;
+  min-width:300px;
+  border-radius: 25px;
+  color:purple;
+}
+
+.new-form button{
+  display:block;
+  background-color: purple;
+  border-radius: 20px;
+  height:35px;
+  width: 110px;
+  margin:10px;
+  color:white;
+  float:right;
+}
+
+.new-form button:hover {
+  background-color: rgb(49, 11, 85);
+}
+
+.task-id{
+  font-size: .9em;
+  display:flex;
+  justify-content: center;
+  background-color: purple;
+  width: 25px;
+  text-align: center;
+  border-radius: 50px;
+  color:white;
+
+}
+
+.task-desc{
+  margin-top: 7px;
+font-size: .9em !important;
+color:darkblue;
+}
+
+body {
+  background-image: url('https://images.unsplash.com/photo-1620203492457-0bf1274ba4b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2167&q=80');
+  padding-bottom:50px;
+}
+

@@ -1,11 +1,11 @@
+
 import '../../input.css'
 import '../../index.css'
 
-function Card() {
+function Card({children}) {
     return (
         <div className='card'>
-            <h1>#1</h1>
-            <h2>Finish Work</h2>
+            {children}
         </div>
         
     )
