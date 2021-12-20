@@ -127,3 +127,19 @@ button.edit{
   margin-left:auto;
   margin-right:10px;
 }
+
+@media  screen and (max-width: 600px) {
+  .new-form input {
+    padding: 10px;
+    margin: 10px;
+    height:40px;
+    width:100%;
+    border-radius: 25px;
+    color:purple;
+  }
+
+  .new-form {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
