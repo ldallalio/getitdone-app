@@ -34,6 +34,7 @@ header li:hover {
 }
 
 .card {
+  overflow-wrap: anywhere;
   margin: auto;
   margin-top:40px;
   background-color: aquamarine;
@@ -55,7 +56,7 @@ header li:hover {
   padding: 10px;
   margin: 10px;
   height:40px;
-  min-width:300px;
+  width:50%;
   border-radius: 25px;
   color:purple;
 }
