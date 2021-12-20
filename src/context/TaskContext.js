@@ -4,7 +4,6 @@ import {createContext, useState} from 'react'
 
  export const TaskProvider = ({children}) => {
     //State//
-
     const [task, setTask] = useState([
          
 /*             {
@@ -15,18 +14,23 @@ import {createContext, useState} from 'react'
         
     ])
     //Functions//
-    //Add Feedback
+    //Add Task
     const addTask =  (newTask) => {
         const data = newTask
-        console.log(data)
         setTask([data, ...task])
     }
+//Delete Task
+const deleteTask= (id) => {
     
+        setTask(task.filter((item) => item.id !== id))
+    
+}
      return <TaskContext.Provider value={{
     //Add the propes we are using
          task,
          addTask,
-         setTask
+         setTask,
+         deleteTask
      }}>
          {children}
      </TaskContext.Provider>

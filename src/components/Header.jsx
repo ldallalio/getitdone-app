@@ -11,8 +11,8 @@ function Header() {
         '>
             <div className="logo ">GetItDone</div>
             <ul className='flex '>
-                <li className='hover:bg-darkgreen '>Home</li>
-                <li className='hover:bg-darkgreen' >About</li>
+                {/* <li >Home</li>
+                <li >About</li> */}
             </ul>
         </header>
     )

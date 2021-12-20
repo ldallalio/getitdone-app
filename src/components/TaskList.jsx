@@ -7,11 +7,6 @@ import Card from './shared/Card'
 function TaskList() {
     const {task} = useContext(TaskContext)
 
-    
-        
-    
-
-
     if(task === undefined || task.length < 1){
         return  (
                  <Card>
@@ -22,18 +17,31 @@ function TaskList() {
              )
      }
 
-     
+     // SORTS ID IN ASCENDING ORDER
+
+     function compareValues(key, order = 'asc') {
+        return function innerSort(a, b) {
+          if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) return 0;
+          const comparison = a[key].localeCompare(b[key]);
+      
+          return (
+            (order === 'desc') ? (comparison * -1) : comparison
+          );
+        };
+      }
+      task.sort(compareValues('id'))
+
     return (
-
-
-        <div>{
-           task.map((task) => (
+        <Card>
+        {
+            task.map((task) => (
             <TaskItem 
             key={task.id}
             task={task}
             />
-         ))}
-        </div>
+            ))
+         }
+        </Card>
     )
 }
 

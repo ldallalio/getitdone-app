@@ -1,21 +1,29 @@
-import {useState} from 'react'
+import {useContext} from 'react'
 import PropTypes from 'prop-types'
+import {FaTimes, FaEdit} from 'react-icons/fa'
 import '../index.css'
 import '../input.css'
-import Card from './shared/Card'
 import TaskContext from '../context/TaskContext'
-import Message from './shared/Message'
 
 
-function TaskItem({task}) {
-
-
+function TaskItem({task, item}) {
+        const {deleteTask} = useContext(TaskContext)
         return (
-            <Card>
-                <h2 className='task-id'>{task.id}</h2>
-                <p className='task-desc'>{task.desc}</p>
-            </Card>
 
+                    <div className='task-desc'>
+                        <h2 className='task-id'>{task.id}</h2>
+                        <p>{task.desc}</p>
+                       <button onClick={() => {
+                        {deleteTask(task.id)}
+                       }}>
+                       <FaTimes color='purple'/>        
+                       </button>
+                                
+                        
+                </div>
+                
+
+                
         )
     
         
