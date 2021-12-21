@@ -128,6 +128,12 @@ button.edit{
   margin-right:10px;
 }
 
+.task-id svg {
+  color:lightblue !important;
+  height:1.8em;
+  width: 2em;
+}
+
 @media  screen and (max-width: 600px) {
   .new-form input {
     padding: 10px;

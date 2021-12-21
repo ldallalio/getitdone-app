@@ -2,10 +2,11 @@ import {useContext} from 'react'
 import TaskItem from '../components/TaskItem'
 import TaskContext from '../context/TaskContext'
 import Card from './shared/Card'
+import {FaTimes, FaEdit} from 'react-icons/fa'
 
 
 function TaskList() {
-    const {task} = useContext(TaskContext)
+    const {deleteTask,task} = useContext(TaskContext)
 
     if(task === undefined || task.length < 1){
         return  (
@@ -33,14 +34,16 @@ function TaskList() {
 
     return (
         <Card>
-        {
-            task.map((task) => (
+          {task.map((task) => (
             <TaskItem 
             key={task.id}
             task={task}
             />
             ))
-         }
+        
+            }
+
+
         </Card>
     )
 }

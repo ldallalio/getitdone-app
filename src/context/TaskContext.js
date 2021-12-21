@@ -21,8 +21,9 @@ import {createContext, useState} from 'react'
     }
 //Delete Task
 const deleteTask= (id) => {
-    
         setTask(task.filter((item) => item.id !== id))
+        let newArr = {...task}
+        console.log(newArr[0].id)
     
 }
      return <TaskContext.Provider value={{
