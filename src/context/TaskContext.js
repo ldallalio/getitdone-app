@@ -7,7 +7,7 @@ export const TaskProvider = ({ children }) => {
 	//Manually Set State For Testing
 	// const testTask = { id: 1, desc: 'test' };
 	// localStorage.setItem('task', JSON.stringify(testTask));
-	localStorage.setItem('task', null);
+	// localStorage.setItem('task', null);
 
 	const [task, setTask] = useState([]);
 	const taskArr = [];
