@@ -21,7 +21,6 @@ export const TaskProvider = ({ children }) => {
 		const objTask = JSON.parse(localStorage.getItem('task'));
 		const arrTaskWithNull = [].concat(objTask);
 		const arrTask = arrTaskWithNull.filter((e) => e != null);
-		console.log(arrTask);
 		setTask(arrTask);
 	};
 
@@ -38,7 +37,10 @@ export const TaskProvider = ({ children }) => {
 	//Delete Task
 	const deleteTask = (id) => {
 		const objTask = JSON.parse(localStorage.getItem('task'));
-		const arrTask = [].concat(objTask);
+
+		const arrTaskWithNull = [].concat(objTask);
+		const arrTask = arrTaskWithNull.filter((e) => e != null);
+
 		const newTask = arrTask.filter((task) => task.id !== id);
 		localStorage.setItem('task', JSON.stringify(newTask));
 		setTask(...taskArr);
