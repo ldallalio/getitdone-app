@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useContext } from 'react';
-import { FaTimes, FaBullseye } from 'react-icons/fa';
+import { FaTimes, FaMapMarkerAlt } from 'react-icons/fa';
 import '../index.css';
 import '../input.css';
 import TaskContext from '../context/TaskContext';
@@ -11,7 +11,7 @@ function TaskItem({ task, item }) {
 	return (
 		<div className='task-desc'>
 			<h2 className='task-id'>
-				<FaBullseye color='white' />
+				<FaMapMarkerAlt color='white' />
 			</h2>
 			<p>{task.desc}</p>
 			<button
@@ -27,3 +27,4 @@ function TaskItem({ task, item }) {
 }
 
 export default TaskItem;
+FaMapMarkerAlt;
