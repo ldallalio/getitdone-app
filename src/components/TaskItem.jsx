@@ -27,4 +27,3 @@ function TaskItem({ task, item }) {
 }
 
 export default TaskItem;
-FaMapMarkerAlt;
