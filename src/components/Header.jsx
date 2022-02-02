@@ -1,21 +1,21 @@
-import '../input.css'
-import '../index.css'
+import React from 'react';
+import '../input.css';
 
 function Header() {
-    return (
-        <header 
-        className='w-screen 
+	return (
+		<header
+			className='w-screen 
         text-white
         bg-medpurple 
         flex 
         '>
-            <div className="logo ">GetItDone</div>
-            <ul className='flex '>
-                {/* <li >Home</li>
+			<div className='logo '>GetItDone</div>
+			<ul className='flex '>
+				{/* <li >Home</li>
                 <li >About</li> */}
-            </ul>
-        </header>
-    )
+			</ul>
+		</header>
+	);
 }
 
-export default Header
+export default Header;

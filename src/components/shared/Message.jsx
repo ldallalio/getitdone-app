@@ -1,12 +1,8 @@
-import Card from "./Card"
+import React from 'react';
 
-
-function Message({children}) {
-    return (
-        <div className="Message">
-            {children}
-        </div>
-    )
+// eslint-disable-next-line react/prop-types
+function Message({ children }) {
+	return <div className='Message'>{children}</div>;
 }
 
-export default Message
+export default Message;
