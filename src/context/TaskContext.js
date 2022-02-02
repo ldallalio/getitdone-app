@@ -11,16 +11,17 @@ export const TaskProvider = ({ children }) => {
 	const [task, setTask] = useState([]);
 	const taskArr = [];
 
-	const getTask = () => {
-		const objTask = JSON.parse(localStorage.getItem('task'));
-		const arrTask = [].concat(objTask);
-		taskArr.push(arrTask);
-		setTask(...taskArr);
-	};
-
 	useEffect(() => {
 		getTask();
 	}, []);
+
+	//Get Task From Local Storage
+	const getTask = () => {
+		const objTask = JSON.parse(localStorage.getItem('task'));
+		const arrTask = [].concat(objTask);
+		setTask(arrTask);
+	};
+
 	//Add Task To Local Storage
 	const addTask = (newTask) => {
 		const objTask = JSON.parse(localStorage.getItem('task'));
@@ -30,6 +31,7 @@ export const TaskProvider = ({ children }) => {
 		setTask(...taskArr);
 		getTask();
 	};
+
 	//Delete Task
 	const deleteTask = (id) => {
 		const objTask = JSON.parse(localStorage.getItem('task'));
@@ -39,6 +41,7 @@ export const TaskProvider = ({ children }) => {
 		setTask(...taskArr);
 		getTask();
 	};
+
 	//Update Task
 	const updateTask = (id, newTask) => {
 		const objTask = JSON.parse(localStorage.getItem('task'));
@@ -49,6 +52,7 @@ export const TaskProvider = ({ children }) => {
 		setTask(...taskArr);
 		getTask();
 	};
+
 	return (
 		<TaskContext.Provider
 			value={{
